@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Dumbbell, Facebook, Instagram, Twitter } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { motion } from "framer-motion";
+import { Dumbbell, Facebook, Instagram, Twitter } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,7 @@ export function Footer() {
             <div className="flex items-center gap-2 text-2xl font-bold">
               <Dumbbell className="h-8 w-8" />
               <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
-                ElevateLife
+                WarriorHearts
               </span>
             </div>
             <p className="text-muted-foreground">
@@ -24,16 +24,18 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About', 'Services', 'Gallery', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["Home", "About", "Services", "Gallery", "Contact"].map(
+                (item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item.toLowerCase()}`}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -41,10 +43,10 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {[
-                'Personal Training',
-                'Boxing Classes',
-                'Yoga Sessions',
-                'Wellness Programs',
+                "Personal Training",
+                "Boxing Classes",
+                "Yoga Sessions",
+                "Wellness Programs",
               ].map((item) => (
                 <li key={item}>
                   <a
@@ -75,7 +77,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-12 pt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} ElevateLife. All rights reserved.</p>
+          <p>&copy; {currentYear} WarriorHearts. All rights reserved.</p>
         </div>
       </div>
     </footer>

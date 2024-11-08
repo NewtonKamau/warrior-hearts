@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Dumbbell } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Dumbbell } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
+} from "@/components/ui/navigation-menu";
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,14 +18,16 @@ export function Navigation() {
       setScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        scrolled
+          ? "bg-background/80 backdrop-blur-lg shadow-lg"
+          : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -39,7 +41,7 @@ export function Navigation() {
           >
             <Dumbbell className="h-8 w-8" />
             <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-              ElevateLife
+              WarriorHearts
             </span>
           </motion.div>
 
@@ -47,15 +49,15 @@ export function Navigation() {
             <NavigationMenu>
               <NavigationMenuList>
                 {[
-                  'Home',
-                  'About',
-                  'Services',
-                  'Remote',
-                  'BMI',
-                  'Team',
-                  'Gallery',
-                  'Testimonials',
-                  'Contact'
+                  "Home",
+                  "About",
+                  "Services",
+                  "Remote",
+                  "BMI",
+                  "Team",
+                  "Gallery",
+                  "Testimonials",
+                  "Contact",
                 ].map((item) => (
                   <NavigationMenuItem key={item}>
                     <NavigationMenuLink
